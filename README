@@ -1,0 +1,5 @@
+# tcx_plot
+# cje 15/1/2022
+# plot data from TCX files, compare plots from multiple TCX files
+# idea is to compare data from two power meters
+# uses TCX parser from https://github.com/vkurup/python-tcxparser
