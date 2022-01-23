@@ -10,7 +10,7 @@ import tcxparser
 import matplotlib.pyplot as plt
 
 tcx_garminvector = '/home/john/code/tcx_plot/activity_8120026129.tcx'
-tcx_bikeerg = '/home/john/code/tcx_plot/activity_8120026129.gpx'
+tcx_bikeerg = '/home/john/code/tcx_plot/activity_8120866656.tcx'
 
 class ActivityData:
     def __init__(self, tcx_file):
@@ -21,6 +21,7 @@ class ActivityData:
         self.hr = tcx.hr_values()
         self.np = len(self.time)
         self.dt = tcx.time_durations()  # datetime.timedelta object
+        self.power = tcx.power()
         # need to dt to be a sensible type in sensible units (float in sec, min?)
         print(self.np)
 
@@ -31,8 +32,8 @@ ax1 = fig1.add_subplot(1,1,1)
 ax1.plot(ride_garmin.hr)
 plt.show()
 
-print(ride_garmin.dt[:100])
-print(type(ride_garmin.dt[0].seconds))
-print(ride_garmin.dt[20].seconds)
-print(ride_garmin.dt[20].microseconds)
+#print(ride_garmin.dt[:100])
+#print(type(ride_garmin.dt[0].seconds))
+#print(ride_garmin.dt[20].seconds)
+#print(ride_garmin.dt[20].microseconds)
 
